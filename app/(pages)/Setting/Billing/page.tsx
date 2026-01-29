@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
 import UserDropMenu from "@/app/components/UserDropMenu";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import SettingSidebar from "@/app/components/SettingSidebar";
 
 export default function Home() {
@@ -84,9 +84,9 @@ export default function Home() {
                                              <span className="text-lg font-inter font-bold leading-8 text-black-1000">Bank Accounts</span>
                                              <h6 className="text-sm font-normal leading-5 font-inter text-gray-1000">Manage accounts for receiving payouts</h6>
                                         </div>
-                                        <Buttons href="/" variant="primary" className="bg-blue-1200! w-fit! gap-2 py-[14px]! px-5!">
+                                        <PrimaryLink href="/" variant="primary" className="bg-blue-1200! w-fit! gap-2 py-[14px]! px-5!">
                                              <img src="/images/plus-icon.svg" alt="" />    Add Bank Account
-                                        </Buttons>
+                                        </PrimaryLink>
 
                                    </div>
                                    <div className="bg-white flex items-start gap-4 border border-gray-1100 rounded-xl shadow-7xl px-5 py-6">

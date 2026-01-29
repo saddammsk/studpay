@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
 import UserDropMenu from "@/app/components/UserDropMenu";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import Link from 'next/link'
 export default function Home() {
      const [isOpen, setIsOpen] = useState(false);
@@ -113,9 +113,9 @@ export default function Home() {
                               <p className="text-base font-inter font-normal leading-6 text-gray-2200">Manage your rental guarantees</p>
                          </div>
                          <div className="w-fit">
-                              <Buttons href="/" className="!py-2.5 px-4 gap-2" variant="primary">
+                              <PrimaryLink href="/" className="!py-2.5 px-4 gap-2" variant="primary">
                                    <img src="/images/plus-icon.svg" alt="" />   Request a guarantee
-                              </Buttons>
+                              </PrimaryLink>
                          </div>
                     </div>
                     <div className="grid xl:grid-cols-3 md:grid-cols-2 mb-4 gap-4">
@@ -195,14 +195,14 @@ export default function Home() {
                                    </ul>
 
                                    {/* Button */}
-                                   <Buttons
+                                   <PrimaryLink
                                         href="/"
                                         variant="primaryborder"
                                         className={`!py-1.5 px-4 gap-2 ${item.disabled ? "opacity-50" : ""
                                              }`}
                                    >
                                         Declare a claim
-                                   </Buttons>
+                                   </PrimaryLink>
                               </div>
                          ))}
                     </div>

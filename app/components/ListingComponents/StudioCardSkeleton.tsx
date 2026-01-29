@@ -2,7 +2,6 @@ export default function StudioCardSkeleton({ view }: { view: "grid" | "list" }) 
       return (
             <div className="group bg-white shadow-14xl border-gray17 rounded-xl animate-pulse">
                   <div className={view === "grid" ? "" : "flex flex-row gap-6"}>
-                        {/* Image Skeleton */}
                         <div className={`relative flex flex-col overflow-hidden ${view === "grid" ? "rounded-t-xl" : "rounded-xl md:w-2/5 w-full"}`}>
                               <div className="w-full h-[320px] bg-gray-200"></div>
                               <ul className="flex items-center justify-between absolute top-0 left-0 w-full px-3 py-3.25">
@@ -15,19 +14,15 @@ export default function StudioCardSkeleton({ view }: { view: "grid" | "list" }) 
                               </ul>
                         </div>
 
-                        {/* Content Skeleton */}
                         <div className="p-4 flex-1 flex flex-col justify-between">
-                              {/* Title Skeleton */}
                               <div className="h-7 bg-gray-200 rounded w-3/4 mb-2"></div>
 
                               <div className="w-full">
-                                    {/* Location Skeleton */}
                                     <div className="flex items-center gap-1.5 mt-1.75">
                                           <div className="w-4 h-4 bg-gray-200 rounded"></div>
                                           <div className="h-5 bg-gray-200 rounded w-full"></div>
                                     </div>
 
-                                    {/* Stats Skeleton */}
                                     <div className="pt-3 mt-3 border-t border-solid border-gray17 flex items-center justify-between">
                                           <ul className="flex items-center gap-3">
                                                 <li className="flex items-center gap-1.5">
@@ -43,7 +38,6 @@ export default function StudioCardSkeleton({ view }: { view: "grid" | "list" }) 
                                                       <div className="h-4 bg-gray-200 rounded w-10"></div>
                                                 </li>
                                           </ul>
-                                          {/* Price Skeleton */}
                                           <div className="h-7 bg-gray-200 rounded w-24"></div>
                                     </div>
                               </div>
@@ -53,7 +47,6 @@ export default function StudioCardSkeleton({ view }: { view: "grid" | "list" }) 
       );
 }
 
-// Grid of skeleton cards
 export function StudioCardSkeletonGrid({ view, count = 6 }: { view: "grid" | "list"; count?: number }) {
       return (
             <div className={view === "grid" ? "grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6" : "flex flex-col gap-6"}>

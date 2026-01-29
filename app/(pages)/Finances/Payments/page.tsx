@@ -3,7 +3,7 @@ import { useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
 import UserDropMenu from "@/app/components/UserDropMenu";
 import Link from "next/link";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import InputField from "@/app/ui/InputField";
 import PaymentsTable2 from "@/app/components/PaymentsTable2";
 export default function Home() {

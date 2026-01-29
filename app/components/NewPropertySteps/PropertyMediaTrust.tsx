@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image'
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 
 export const PropertyMediaTrust = () => {
 
@@ -45,10 +45,10 @@ export const PropertyMediaTrust = () => {
                                           <p className="text-gray43 font-inter font-normal text-sm leading-5 mb-4">
                                                 Minimum 3 photos · Maximum 30 · JPG / PNG
                                           </p>
-                                          <Buttons href="#" className="h-10 sm:w-auto! w-full! inline-flex px-4 gap-4 bg-blue12 text-white">
+                                          <PrimaryLink href="#" className="h-10 sm:w-auto! w-full! inline-flex px-4 gap-4 bg-blue12 text-white">
                                                 <Image src="../images/upload-icon.svg" alt="Image" width={16} height={16} className="brightness-2000" />
                                                 Browse files
-                                          </Buttons>
+                                          </PrimaryLink>
 
                                           <input
                                                 id="file-upload"

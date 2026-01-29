@@ -1,24 +1,37 @@
 import { Radio, RadioGroup } from '@headlessui/react'
-import { useState } from 'react'
 
 const plans = [
-      { name: 'Property tax document', img: '../images/document-icon.svg', dis: 'Recommended – fast approval' },
-      { name: 'Ownership title', img: '../images/Ownership-icon.svg', dis: 'Definitive validation' },
-      { name: 'Notary deed', img: '../images/notary-icon.svg', dis: 'For recent acquisitions' },
+      { name: 'Property tax document', img: '../images/document-icon.svg', dis: 'Recommended – fast approval', value: 'property-tax' },
+      { name: 'Ownership title', img: '../images/Ownership-icon.svg', dis: 'Definitive validation', value: 'ownership-title' },
+      { name: 'Notary deed', img: '../images/notary-icon.svg', dis: 'For recent acquisitions', value: 'notary-deed' },
 ]
 
-export default function Example() {
-      const [selected, setSelected] = useState(plans[0])
+interface PropertyRadioProps {
+  value: string;
+  onChange: (value: string) => void;
+}
+
+export default function PropertyRadio({ value, onChange }: PropertyRadioProps) {
+      const selectedPlan = plans.find(plan => plan.value === value) || plans[0];
+
+      const handleChange = (plan: typeof plans[0]) => {
+            onChange(plan.value);
+      };
 
       return (
             <div className="w-full mt-4">
-                  <RadioGroup by="name" value={selected} onChange={setSelected} aria-label="Server size">
+                  <RadioGroup 
+                        by="value" 
+                        value={selectedPlan} 
+                        onChange={handleChange} 
+                        aria-label="Document type"
+                  >
                         {plans.map((plan, index) => (
                               <Radio
-                                    key={plan.name}
+                                    key={plan.value}
                                     value={plan}
                                     className="mb-4 group group-radio relative flex cursor-pointer rounded-2xl bg-white border-2 border-solid border-gray32 p-5 transition focus:not-data-focus:outline-none data-checked:bg-blue19 data-checked:border-blue18 data-checked:shadow-17xl data-focus:outline data-focus:outline-white"
-                              > {/* Recommended Tag only for first card */}
+                              >
                                     {index === 0 && (
                                           <span className="absolute -top-3 left-7.5 bg-orange12 text-white text-xs leading-4 rounded-full font-outfit font-semibold px-2.5 py-0 h-5 flex items-center justify-center">
                                                 Recommended

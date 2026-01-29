@@ -7,7 +7,7 @@ import InputField from "@/app/ui/InputField";
 import SelectBox, { SelectOption } from "@/app/components/SelectBox";
 import { DatePicker } from "@/app/components/DatePicker";
 import { Button } from "@/components/ui/button";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 
 const propertyOptions: SelectOption[] = [
      { id: 1, name: 'All Status' },
@@ -177,14 +177,14 @@ export default function Home() {
                               </div>
                               <ul className="flex items-center justify-end gap-4">
                                    <li>
-                                        <Buttons type="submit" className="px-4 !py-2.5 gap-2.5 border border-gray-1300 bg-transparent! text-black-1000!" variant="primary">
+                                        <PrimaryLink type="submit" className="px-4 !py-2.5 gap-2.5 border border-gray-1300 bg-transparent! text-black-1000!" variant="primary">
                                              Save as Draft
-                                        </Buttons>
+                                        </PrimaryLink>
                                    </li>
                                    <li>
-                                        <Buttons type="submit" className="px-4 !py-2.5 gap-2.5 bg-blue-1100!" variant="primary">
+                                        <PrimaryLink type="submit" className="px-4 !py-2.5 gap-2.5 bg-blue-1100!" variant="primary">
                                              Create Invoice
-                                        </Buttons>
+                                        </PrimaryLink>
                                    </li>
                               </ul>
                          </form>

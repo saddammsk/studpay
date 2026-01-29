@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image'
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 
 
 
@@ -28,7 +28,7 @@ export const MediaTourHotspots = () => {
                                     <div className="flex flex-col mb-4">
                                           <Image src="/images/LivingRoom.png" alt="Image" width={600} height={337} className="w-full rounded-xl" />
                                     </div>
-                                    <Buttons className="gap-2 text-base! hover:bg-yellow-1100/90 hover:shadow-none"><Image src="/images/plus-icon.svg" alt="Image" width={20} height={20} /> Add New Hotspot</Buttons>
+                                    <PrimaryLink className="gap-2 text-base! hover:bg-yellow-1100/90 hover:shadow-none"><Image src="/images/plus-icon.svg" alt="Image" width={20} height={20} /> Add New Hotspot</PrimaryLink>
                               </div>
                               <div className="lg:max-w-[288px] md:max-w-50 max-w-full w-full">
                                     <h4 className="font-medium font-inter mb-3 text-sm leading-5 text-black24 tracking-[0.35px] uppercase">Hotspots (0)</h4>

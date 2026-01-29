@@ -42,7 +42,7 @@ const balance =
  const hasProfilePicture = !!user?.personalInformation?.profilePicture;
   const avatarUrl = hasProfilePicture
     ? user!.personalInformation!.profilePicture!
-    : "/images/default-user.png";
+    : "/images/user-img.png";
   const initials =
     !hasProfilePicture && user?.name
       ? user.name

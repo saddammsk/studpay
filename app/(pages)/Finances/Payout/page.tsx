@@ -3,7 +3,7 @@ import { useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
 import UserDropMenu from "@/app/components/UserDropMenu";
 import Link from "next/link";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import InputField from "@/app/ui/InputField";
 import PaymentsTable2 from "@/app/components/PaymentsTable2";
 import PayoutsTable from "@/app/components/PayoutTable";
@@ -55,9 +55,9 @@ export default function Home() {
                               <p className="text-sm font-inter font-normal leading-6 text-gray-2200">Manage and track your payout transactions</p>
                          </div>
                          <div className="flex-1 w-full max-w-[192px]">
-                              <Buttons type="submit" className="px-4 !py-2.5 gap-2.5" variant="bluebtn">
+                              <PrimaryLink type="submit" className="px-4 !py-2.5 gap-2.5" variant="bluebtn">
                                    <img src="/images/arrow-2.svg" className="brightness-[6]" alt="" />  Request Payout
-                              </Buttons>
+                              </PrimaryLink>
                          </div>
                     </div>
                     <div className="grid lg:grid-cols-2 xl:gap-[60px] mb-4 gap-4">

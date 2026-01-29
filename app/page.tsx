@@ -1,4 +1,4 @@
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import Link from "next/link";
 import DashboardLayout from "@/layouts/DashboardLayout";
 
@@ -66,9 +66,9 @@ export default function Dashboard() {
                     </div>
                   </li>
                 </ul>
-                <Buttons href="/" className="h-10">
+                <PrimaryLink href="/" className="h-10">
                   Request Payout
-                </Buttons>
+                </PrimaryLink>
               </div>
             </div>
           </div>
@@ -170,9 +170,9 @@ export default function Dashboard() {
             <li className="text-gray-1000 font-normal text-sm leading-5 mb-3 flex items-center justify-between">Synced Listings <span className="text-black-1000 font-medium">24</span></li>
             <li className="text-gray-1000 font-normal text-sm leading-5 flex items-center justify-between">Last Sync <span className="text-black-1000 font-medium">Today at 09:30</span></li>
           </ul>
-          <Buttons href="/" className="h-10 gap-4 bg-white border border-solid border-gray-1100 text-black-1000! hover:bg-transparent hover:shadow-none">
+          <PrimaryLink href="/" className="h-10 gap-4 bg-white border border-solid border-gray-1100 text-black-1000! hover:bg-transparent hover:shadow-none">
             <img src="../images/sync-icon.svg" alt="" /> Sync Now
-          </Buttons>
+          </PrimaryLink>
         </div>
       </div>
     </DashboardLayout>

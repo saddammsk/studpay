@@ -3,7 +3,7 @@ import { useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
 import UserDropMenu from "@/app/components/UserDropMenu";
 import Link from "next/link";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 
 
 
@@ -57,15 +57,15 @@ export default function Home() {
                               <div className="font-dm-sans font-bold text-xs text-yellow-1100 bg-yellow-1100/[10%] rounded-full py-0.5 inline-block px-2.5">Pending</div>
                          </div>
                          <div className="flex items-center justify-end flex-wrap gap-3">
-                              <Buttons type="submit" className="px-4 !py-2.5 w-fit! gap-2.5  border border-gray-1100!" variant="default">
+                              <PrimaryLink type="submit" className="px-4 !py-2.5 w-fit! gap-2.5  border border-gray-1100!" variant="default">
                                    <img src="/images/export-arrow.svg" alt="" /> Download PDF
-                              </Buttons>
-                              <Buttons type="submit" className="px-4 !py-2.5 w-fit! gap-2.5  border border-gray-1100!" variant="default">
+                              </PrimaryLink>
+                              <PrimaryLink type="submit" className="px-4 !py-2.5 w-fit! gap-2.5  border border-gray-1100!" variant="default">
                                    <img src="/images/send-icon.svg" alt="" /> Send to Student
-                              </Buttons>
-                              <Buttons type="submit" className="px-4 !py-2.5 w-fit! gap-2.5  border border-gray-1100!" variant="success">
+                              </PrimaryLink>
+                              <PrimaryLink type="submit" className="px-4 !py-2.5 w-fit! gap-2.5  border border-gray-1100!" variant="success">
                                    <img src="/images/tick-icon3.svg" alt="" /> Mark as Paid
-                              </Buttons>
+                              </PrimaryLink>
                          </div>
                     </div>
                     <div className="mt-9">

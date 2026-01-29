@@ -5,7 +5,7 @@ import UserDropMenu from "@/app/components/UserDropMenu";
 import Link from "next/link";
 import SelectBox, { SelectOption } from "@/app/components/SelectBox";
 import { DatePicker } from "@/app/components/DatePicker";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import InvoiceTable from "@/app/components/InvoiceTable";
 
 const propertyOptions: SelectOption[] = [
@@ -64,9 +64,9 @@ export default function Home() {
                               <p className="text-base font-inter font-normal leading-6 text-gray-2200">Manage and track all student invoices</p>
                          </div>
                          <div className="flex items-center gap-3">
-                              <Buttons type="submit" className="px-4 !py-2.5 gap-2.5 bg-blue-1500!" variant="primary">
+                              <PrimaryLink type="submit" className="px-4 !py-2.5 gap-2.5 bg-blue-1500!" variant="primary">
                                    <img src="/images/plus-icon.svg" className="brightness-[28]" alt="" /> Create Invoice
-                              </Buttons>
+                              </PrimaryLink>
                          </div>
                     </div>
                     <div className="xl:mt-[30px] mt-5 flex xl:flex-nowrap flex-wrap gap-3 mb-6">

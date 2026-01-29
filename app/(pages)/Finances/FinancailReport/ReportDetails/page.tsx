@@ -4,7 +4,7 @@ import Sidebar from "@/app/components/Sidebar";
 import UserDropMenu from "@/app/components/UserDropMenu";
 import Link from "next/link";
 import SelectBox, { SelectOption } from "@/app/components/SelectBox";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import CalendarInput from "@/app/components/CalendarInput";
 import EarningsTable from "@/app/components/EarningsTable";
 import ReportCards from "@/app/components/ReportCards";
@@ -80,9 +80,9 @@ export default function Home() {
                               <button className="text-sm rounded-[10px] font-normal cursor-pointer font-inter leading-5 text-black flex items-center justify-center gap-2 py-[9px] px-[14px] bg-transparent border border-gray-2400">
                                    <img src="/images/export-arrow.svg" alt="" /> Export CSV</button>
                               <div className="w-fit">
-                                   <Buttons type="submit" className="px-4 !py-2.5 gap-2.5 bg-blue-1100!" variant="primary">
+                                   <PrimaryLink type="submit" className="px-4 !py-2.5 gap-2.5 bg-blue-1100!" variant="primary">
                                         <img src="/images/file-icon.svg" className="brightness-[28]" alt="" />  Download PDF
-                                   </Buttons>
+                                   </PrimaryLink>
                               </div>
                          </div>
                     </div>

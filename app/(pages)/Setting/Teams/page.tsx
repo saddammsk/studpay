@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
 import UserDropMenu from "@/app/components/UserDropMenu";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import SettingSidebar from "@/app/components/SettingSidebar";
 import DropdownMenu from "@/app/ui/DropdownMenu";
 import Link from "next/link";
@@ -60,9 +60,9 @@ export default function Home() {
                                         <div className="flex items-center justify-between">
                                              <p className="text-sm font-normal font-inter leading-6 text-gray-1400">Team Members</p>
                                              <div className="w-fit min-w-[120px]">
-                                                  <Buttons href="/" className="!py-2.5" variant="primary">
+                                                  <PrimaryLink href="/" className="!py-2.5" variant="primary">
                                                        Invite Member
-                                                  </Buttons>
+                                                  </PrimaryLink>
                                              </div>
                                         </div>
                                         <form action="" className="mt-6 space-y-3">

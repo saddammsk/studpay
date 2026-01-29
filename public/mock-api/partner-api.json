@@ -156,88 +156,84 @@
   ],
 
   "listings": {
-    "filters": {
-      "status": ["active", "draft", "boosted"],
-      "view": ["grid", "list"]
-    },
     "items": [
       {
         "id": "prop_001",
         "title": "Studio Montmartre",
         "status": "active",
-        "image": "/images/listings/studio-montmartre.jpg",
+        "image": "/images/studio-montmartre.jpg",
         "address": "15 Rue des Abbesses, 75018 Paris",
         "applications": 28,
         "views": 2500,
-        "favorites": 1200,
-        "rent": 890,
+        "likes": 1200,
         "currency": "EUR",
-        "isBoosted": false
+        "price": "€890/mo"
       },
       {
         "id": "prop_002",
         "title": "T2 Marais",
         "status": "boosted",
-        "image": "/images/listings/t2-marais.jpg",
+        "image": "/images/T2Marais.jpg",
         "address": "42 Rue de Rivoli, 75004 Paris",
         "applications": 28,
         "views": 2500,
-        "favorites": 1200,
+        "likes": 1200,
         "rent": 1450,
         "currency": "EUR",
-        "isBoosted": true
+        "price": "€1450/mo"
       },
       {
         "id": "prop_003",
         "title": "Coliving Saint-Denis",
         "status": "draft",
-        "image": "/images/listings/coliving-saint-denis.jpg",
+        "image": "/images/ColivingSaint-Denis.jpg",
         "address": "8 Avenue du Président Wilson, 93200 Saint-Denis",
         "applications": 0,
         "views": 0,
-        "favorites": 0,
+        "likes": 0,
         "rent": 650,
         "currency": "EUR",
-        "isBoosted": false
+        "price": "€650/mo"
       },
       {
         "id": "prop_004",
         "title": "Studio Latin Quarter",
         "status": "active",
-        "image": "/images/listings/studio-latin.jpg",
+        "image": "/images/AppartementBastille.jpg",
         "address": "12 Rue Mouffetard, 75005 Paris",
         "applications": 14,
         "views": 1800,
-        "favorites": 860,
+        "likes": 860,
         "rent": 980,
         "currency": "EUR",
-        "isBoosted": false
+        "price": "€980/mo"
       },
       {
         "id": "prop_005",
         "title": "T1 Bastille",
         "status": "active",
-        "image": "/images/listings/t1-bastille.jpg",
+        "image": "/images/StudioNation.jpg",
         "address": "5 Rue de la Roquette, 75011 Paris",
         "applications": 19,
         "views": 2100,
-        "favorites": 1040,
+        "likes": 1040,
         "rent": 1100,
         "currency": "EUR",
-        "isBoosted": false
+         "price": "€1450/mo"
       },
       {
         "id": "prop_006",
         "title": "Loft République",
         "status": "boosted",
-        "image": "/images/listings/loft-republique.jpg",
+        "image": "",
         "address": "18 Boulevard Magenta, 75010 Paris",
         "applications": 33,
         "views": 3200,
-        "favorites": 1600,
+        "likes": 1600,
         "rent": 1750,
         "currency": "EUR",
-        "isBoosted": true
+         "price": "€1450/mo"
+        
       }
     ]
   }

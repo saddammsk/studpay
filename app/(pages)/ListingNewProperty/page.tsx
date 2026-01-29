@@ -17,7 +17,7 @@ import { PropertyMediaUploadVideo } from "@/app/components/NewPropertySteps/Prop
 import { PropertyMediaStudpayTool } from "@/app/components/NewPropertySteps/PropertyMediaStudpayTool";
 import { PropertyMediaBoostCredibility } from "@/app/components/NewPropertySteps/PropertyMediaBoostCredibility";
 import { Progress } from "@/app/ui/progress"
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import Link from "next/link";
 
 
@@ -149,9 +149,9 @@ export default function Listing() {
                                                             <Link href={'#'} className="inline-flex items-center justify-center bg-gray35 border border-solid border-gray36 rounded-[10px] h-10 px-4 text-black font-outfit font-medium text-sm leading-4 sm:w-auto w-full">Save & Exit</Link>
                                                       </li>
                                                       <li>
-                                                            <Buttons href="#" className="h-10 sm:w-auto! w-full! inline-flex px-8 bg-blue12 text-white">
+                                                            <PrimaryLink href="#" className="h-10 sm:w-auto! w-full! inline-flex px-8 bg-blue12 text-white">
                                                                   Continue
-                                                            </Buttons>
+                                                            </PrimaryLink>
                                                       </li>
                                                 </ul>
                                           </div>

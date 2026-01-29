@@ -116,19 +116,16 @@ function ApplicationTable() {
                     <tbody>
                          {students.map((item) => (
                               <tr key={item.id} className="border-t border-gray-1100">
-                                   {/* Student */}
                                    <td className="px-4 py-3">
                                         <div className="font-medium text-black">{item.student.name}</div>
                                         <div className=" text-gray-1000">{item.student.email}</div>
                                    </td>
 
-                                   {/* Property */}
                                    <td className="px-4 py-3">
                                         <div className="font-medium text-black">{item.property.name}</div>
                                         <div className=" text-gray-1000">{item.property.address}</div>
                                    </td>
 
-                                   {/* Risk */}
                                    <td className="px-4 py-3">
                                         <span
                                              className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium 
@@ -141,7 +138,6 @@ function ApplicationTable() {
 
                                    </td>
 
-                                   {/* Status */}
                                    <td className="px-4 py-3">
                                         <span
                                              className={`inline-flex px-2.5 py-1 rounded-md text-xs font-medium ${statusStyles[item.status as "Approved" | "In Review" | "Pending" | "Rejected"]
@@ -152,7 +148,6 @@ function ApplicationTable() {
 
                                    </td>
 
-                                   {/* Actions */}
                                    <td className="px-4 py-3 text-right">
                                         <button className="text-gray-400 hover:text-gray-600">
                                              •••

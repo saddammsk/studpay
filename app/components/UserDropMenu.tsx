@@ -26,7 +26,7 @@ const UserDropMenu = ({ avatarUrl, initials, hasProfilePicture }: UserDropMenuPr
               <span className="w-8 h-8 rounded-full bg-blue-1000/10 flex items-center justify-center">{initials}</span>
             ) : (
               <Image
-                src="/images/default-user.png"
+                src="/images/user-img.png"
                 alt="user"
                 width={32}
                 height={32}

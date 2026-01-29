@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image'
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 
 export const PropertyMediaBoostCredibility = () => {
 
@@ -58,7 +58,7 @@ export const PropertyMediaBoostCredibility = () => {
                                     <p className="text-blue-1100 font-inter font-medium text-base leading-6">Your listing will receive the "Verified Property" badge</p>
                               </div>
                               <p className="text-gray-2200 font-inter font-normal text-sm leading-5 text-center mt-6">Verification happens after publication and does not prevent your listing from going live</p>
-                              <Buttons className="w-full bg-yellow24 opacity-50 mt-6 h-11 text-darkBrown! gap-4">Continue with Verification <Image src="../images/dark-right-arrow.svg" alt="Image" width={16} height={16} /></Buttons>
+                              <PrimaryLink className="w-full bg-yellow24 opacity-50 mt-6 h-11 text-darkBrown! gap-4">Continue with Verification <Image src="../images/dark-right-arrow.svg" alt="Image" width={16} height={16} /></PrimaryLink>
                         </div>
 
                   </div>

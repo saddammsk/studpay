@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Sidebar from "@/app/components/Sidebar";
 import UserDropMenu from "@/app/components/UserDropMenu";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import Link from "next/link";
 import InputField from "@/app/ui/InputField";
 import SettingSidebar from "@/app/components/SettingSidebar";
@@ -104,9 +104,9 @@ export default function Home() {
                                                   <ToggleSwitch enabled={switch2} setEnabled={setSwitch2} />
                                              </div>
                                              <div className="w-fit ml-auto min-w-[127px]">
-                                                  <Buttons href="/login" className="!py-2.5" variant="primary">
+                                                  <PrimaryLink href="/login" className="!py-2.5" variant="primary">
                                                        Update Password
-                                                  </Buttons>
+                                                  </PrimaryLink>
                                              </div>
                                         </form>
                                    </div>

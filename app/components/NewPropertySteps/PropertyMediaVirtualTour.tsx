@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Dialog, DialogPanel, DialogBackdrop } from '@headlessui/react'
 import Link from "next/link";
 import Image from 'next/image'
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 
 export const PropertyMediaVirtualTour = () => {
       const [isOpenVerify, setIsOpenVerify] = useState(false);
@@ -270,10 +270,10 @@ export const PropertyMediaVirtualTour = () => {
                                                 </Link>
                                           </li>
                                           <li>
-                                                <Buttons className="font-normal gap-4 rounded-[10px]">
+                                                <PrimaryLink className="font-normal gap-4 rounded-[10px]">
                                                       <Image src="../images/calendar-white.svg" alt="Image" width={16} height={16} />
                                                       Book a photographer
-                                                </Buttons>
+                                                </PrimaryLink>
                                           </li>
                                     </ul>
                               </DialogPanel>

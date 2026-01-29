@@ -2,14 +2,16 @@ import { configureStore } from "@reduxjs/toolkit";
 import navigationReducer from "./slices/navigationSlice";
 import notificationsReducer from "./slices/notificationsSlice";
 import dashboardReducer from "./slices/dashboardSlice";
-import userSlice from "./slices/userSlice";
-
+import userReducer from "./slices/userSlice";
+import listReducer from "./slices/listingsSlice";
+  
 export const store = configureStore({
   reducer: {
     navigation: navigationReducer,
     notifications: notificationsReducer,
     dashboard: dashboardReducer,
-    users: userSlice,
+    listings: listReducer,
+    users: userReducer,
   },
 });
 

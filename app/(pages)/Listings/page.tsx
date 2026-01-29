@@ -1,18 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import Buttons from "@/app/ui/Buttons";
+import PrimaryLink from "@/app/ui/PrimaryLink";
 import InputField from "@/app/ui/InputField";
 import DropdownMenu from "@/app/ui/DropdownMenu";
-import PropertyCard from "@/app/components/PropertyCard";
 import DashboardLayout from "@/layouts/DashboardLayout";
+import PropertyListings from "@/app/components/ListingComponents/PropertyListings";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 
 export default function Listing() {
   const [view, setView] = useState<"grid" | "list">("grid");
-     const [statusFilter, setStatusFilter] = useState("all");
+  const [statusFilter, setStatusFilter] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
-
-
+    const { filteredItems, loading } = useSelector((state: RootState) => state.listings);
+  
+  const countItems = filteredItems.length;
 
    const statusMenuItems = [
             { label: 'All Status', value: 'all' },
@@ -37,11 +40,11 @@ export default function Listing() {
         <div className="flex items-center justify-between">
           <div className="">
             <h4 className="text-black-1100 font-inter font-bold sm:text-2xl text-lg sm:leading-8 leading-6 mb-0.5">Property Listings</h4>
-            <p className="text-gray24 font-normal text-sm leading-5">Manage your 6 properties</p>
+            <p className="text-gray24 font-normal text-sm leading-5">Manage your {countItems} properties</p>
           </div>
-          <Buttons href="/" className="h-10 w-auto! inline-flex sm:gap-4 gap-2 px-4 bg-blue-1500 text-white">
+          <PrimaryLink href="/" className="h-10 w-auto! inline-flex sm:gap-4 gap-2 px-4 bg-blue-1500 text-white">
             <img src="../images/plus-icon.svg" alt="" /> Add Listing
-          </Buttons>
+          </PrimaryLink>
 
         </div>
         <div className="flex z-10 relative sm:flex-no sm:flex-nowrap flex-wrap sm:items-baseline items-start sm:gap-4 gap-0 mt-3.5 md:mb-6 mb-5">
@@ -84,7 +87,8 @@ export default function Listing() {
               </li>
             </ul>
         </div>
-        <PropertyCard view={view} searchQuery={searchQuery} statusFilter={statusFilter} />
+
+        <PropertyListings view={view} searchQuery={searchQuery} statusFilter={statusFilter} />
       </div>
     </DashboardLayout>
   );
