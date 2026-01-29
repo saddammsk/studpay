@@ -1,0 +1,244 @@
+{
+  "users": [
+    {
+      "id": "user_001",
+      "name": "John Mike",
+      "role": "Partner",
+      "currency": "EUR",
+      "personalInformation": {
+        "firstName": "John",
+        "lastName": "Mike",
+        "email": "john.mike@example.com",
+        "phone": "+33 6 12 34 56 78",
+        "profilePicture": ""
+      },
+        "FinancialOverview": {
+        "PendingPayouts": "€320000",
+        "LastPayout": "€850000",
+        "walletBalance": 124500
+
+      },
+      "bankDetails": {
+        "bankAccountsConnected": 2,
+        "nextPayout": { "amount": 8500, "date": "2025-12-20" },
+        "thisMonth": 3200,
+        "connectedBanks": [
+          { "bankName": "BNP Paribas", "accountNumber": "FR761234567890" },
+          { "bankName": "Société Générale", "accountNumber": "FR761234567891" }
+        ]
+      },
+      "security": {
+        "password": "********",
+        "twoFactorEnabled": true,
+        "loginAlertsEnabled": true
+      },
+      "notifications": [
+        { "id": 1, "title": "Payment received", "desc": "Monthly rent credited" },
+        { "id": 2, "title": "Maintenance request", "desc": "Tenant requested plumbing service" },
+        { "id": 3, "title": "Lease update", "desc": "Lease agreement updated" },
+        { "id": 4, "title": "Weekly summary", "desc": "Summary of this week activities" }
+      ],
+      "team": [
+        { "id": "team_001", "name": "Alice Brown", "role": "Manager", "email": "alice@example.com" },
+        { "id": "team_002", "name": "Bob Smith", "role": "Assistant", "email": "bob@example.com" }
+      ],
+      "dashboard": {
+        "stats": {
+          "activeListings": { "count": 24, "change": "+3" },
+          "occupancyRate": { "percentage": 87, "change": "+2%" },
+          "pendingApplications": { "count": 12, "alert": 5 }
+        },
+        "financialOverview": {
+          "walletBalance": 12450,
+          "pendingPayouts": 3200,
+          "lastPayout": { "amount": 8500, "date": "2025-12-20" }
+        },
+        "recentActivity": [
+          {
+            "id": "act_101",
+            "type": "application",
+            "title": "New application received",
+            "property": "Studio - 15 Rue de la Paix, Paris",
+            "time": "2 min ago"
+          },
+          {
+            "id": "act_102",
+            "type": "lease",
+            "title": "Lease signed",
+            "property": "T2 - 8 Avenue Victor Hugo, Lyon",
+            "time": "1 hour ago"
+          },
+               {
+            "id": "act_103",
+            "type": "application",
+            "title": "Upcoming move-in",
+            "property": "Emma Martin - Tomorrow at 10:00",
+            "time": "2 min ago"
+          },
+               {
+            "id": "act_104",
+            "type": "application",
+            "title": "New application received",
+            "property": "T3 - 22 Boulevard Haussmann, Paris",
+            "time": "2 min ago"
+          },
+               {
+            "id": "act_105",
+            "type": "application",
+            "title": "New application received",
+            "property": "Studio - 5 Place Bellecour, Lyon",
+            "time": "2 min ago"
+          }
+        ]
+      }
+    },
+    {
+      "id": "user_002",
+      "name": "Sarah Connor",
+      "role": "Owner",
+      "currency": "USD",
+      "walletBalance": 12450,
+      "personalInformation": {
+        "firstName": "Sarah",
+        "lastName": "Connor",
+        "email": "sarah.connor@example.com",
+        "phone": "+1 555-123-4567",
+        "profilePicture": "/images/profile/sarah.png"
+      },
+        "FinancialOverview": {
+        "PendingPayouts": "€30000",
+        "LastPayout": "€85000",
+        "walletBalance": 1245000
+
+      },
+      "bankDetails": {
+        "bankAccountsConnected": 1,
+        "nextPayout": { "amount": 3100, "date": "2025-12-18" },
+        "thisMonth": 1200,
+        "connectedBanks": [
+          { "bankName": "Chase Bank", "accountNumber": "US123456789" }
+        ]
+      },
+      "security": {
+        "password": "********",
+        "twoFactorEnabled": false,
+        "loginAlertsEnabled": true
+      },
+      "notifications": [
+        { "id": 1, "title": "Payment received", "desc": "Monthly rent credited" },
+        { "id": 2, "title": "New inquiry", "desc": "Tenant asked about availability" }
+      ],
+      "team": [
+        { "id": "team_003", "name": "Charlie Daniels", "role": "Assistant", "email": "charlie@example.com" }
+      ],
+      "dashboard": {
+        "stats": {
+          "activeListings": { "count": 8, "change": "+1" },
+          "occupancyRate": { "percentage": 92, "change": "+1%" },
+          "pendingApplications": { "count": 4, "alert": 1 }
+        },
+        "financialOverview": {
+          "walletBalance": 7800,
+          "pendingPayouts": 1200,
+          "lastPayout": { "amount": 3100, "date": "2025-12-18" }
+        },
+        "recentActivity": [
+          {
+            "id": "act_201",
+            "type": "payment",
+            "title": "Rent received",
+            "property": "T1 Bastille, Paris",
+            "time": "10 min ago"
+          }
+        ]
+      }
+    }
+  ],
+
+  "listings": {
+    "filters": {
+      "status": ["active", "draft", "boosted"],
+      "view": ["grid", "list"]
+    },
+    "items": [
+      {
+        "id": "prop_001",
+        "title": "Studio Montmartre",
+        "status": "active",
+        "image": "/images/listings/studio-montmartre.jpg",
+        "address": "15 Rue des Abbesses, 75018 Paris",
+        "applications": 28,
+        "views": 2500,
+        "favorites": 1200,
+        "rent": 890,
+        "currency": "EUR",
+        "isBoosted": false
+      },
+      {
+        "id": "prop_002",
+        "title": "T2 Marais",
+        "status": "boosted",
+        "image": "/images/listings/t2-marais.jpg",
+        "address": "42 Rue de Rivoli, 75004 Paris",
+        "applications": 28,
+        "views": 2500,
+        "favorites": 1200,
+        "rent": 1450,
+        "currency": "EUR",
+        "isBoosted": true
+      },
+      {
+        "id": "prop_003",
+        "title": "Coliving Saint-Denis",
+        "status": "draft",
+        "image": "/images/listings/coliving-saint-denis.jpg",
+        "address": "8 Avenue du Président Wilson, 93200 Saint-Denis",
+        "applications": 0,
+        "views": 0,
+        "favorites": 0,
+        "rent": 650,
+        "currency": "EUR",
+        "isBoosted": false
+      },
+      {
+        "id": "prop_004",
+        "title": "Studio Latin Quarter",
+        "status": "active",
+        "image": "/images/listings/studio-latin.jpg",
+        "address": "12 Rue Mouffetard, 75005 Paris",
+        "applications": 14,
+        "views": 1800,
+        "favorites": 860,
+        "rent": 980,
+        "currency": "EUR",
+        "isBoosted": false
+      },
+      {
+        "id": "prop_005",
+        "title": "T1 Bastille",
+        "status": "active",
+        "image": "/images/listings/t1-bastille.jpg",
+        "address": "5 Rue de la Roquette, 75011 Paris",
+        "applications": 19,
+        "views": 2100,
+        "favorites": 1040,
+        "rent": 1100,
+        "currency": "EUR",
+        "isBoosted": false
+      },
+      {
+        "id": "prop_006",
+        "title": "Loft République",
+        "status": "boosted",
+        "image": "/images/listings/loft-republique.jpg",
+        "address": "18 Boulevard Magenta, 75010 Paris",
+        "applications": 33,
+        "views": 3200,
+        "favorites": 1600,
+        "rent": 1750,
+        "currency": "EUR",
+        "isBoosted": true
+      }
+    ]
+  }
+}

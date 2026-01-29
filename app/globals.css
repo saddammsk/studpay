@@ -1,0 +1,377 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-dm-sans: "DM Sans", sans-serif;
+  --font-inter: "inter", sans-serif;
+  --font-Plus-Jakarta-Sans: "Plus Jakarta Sans", sans-serif;
+  --font-PlayfairDisplay: "Playfair Display", sans-serif;
+  --color-black-1000: #1C1E21;
+  --color-gray-1000: #6B7280;
+  --color-gray-1100: #E5E7EB;
+  --color-gray-1200: #E7F2F9;
+  --color-gray-1300: #E1E7EF;
+  --color-gray-1400: #65758B;
+  --color-gray-1500: #F3F5F7;
+  --color-gray-1600: #F9FAFB;
+  --color-gray-1700: #F2F4F8;
+  --color-gray-1800: #FCFCFD;
+  --color-gray-1900: #FBFBFB;
+  --color-gray-2000: #F0F6FE;
+  --color-gray-2100: #EEEEEE;
+  --color-gray-2200: #676F7E;
+  --color-gray-2300: #F0F2F4;
+  --color-gray-2400: #CDDDE4;
+  --color-gray-2500: #E5F3FA;
+  --color-gray-2600: #DEE8ED;
+  --color-gray-2700: #DCDFE4;
+  --color-gray-2800: #F8F9FB;
+  --color-gray-2900: #F1F5F9;
+  --color-gray-3000: #6A7181;
+  --color-gray-3100: #2A9D90;
+  --color-gray-3200: #EAEDF0;
+  --color-gray-3300: #E0E5EB;
+  --color-gray-3400: #F0FDF4;
+  --color-gray-3500: #627084;
+  --color-gray-3600: #E3E7ED;
+  --color-gray-3700: #F3F5F6;
+  --color-gray-3800: #EEEFF1;
+  --color-gray-3900: #FAF3E5;
+  --color-gray-4000: #FBFAF9;
+  --color-gray-4100: #E9EAED;
+  --color-blue-1000: #0A91FF;
+  --color-blue-1100: #0D8CFF;
+  --color-blue-1200: #0B64F4;
+  --color-blue-1300: #EBF6FF;
+  --color-blue-1400: #3C83F6;
+  --color-blue-1500: #0DA2E7;
+  --color-blue-1600: #0A89FF;
+  --color-blue-1700: #0070CC;
+  --color-blue-1800: #F0F8FF;
+  --color-blue-1900: #308CE8;
+  --color-cream-1000: #FCFBF8;
+  --color-black-1000: #0F1729;
+  --color-yellow-1000: #D97706;
+  --color-black-1100: #1A1A1A;
+  --color-black-1200: #14181F;
+  --color-black-1300: #1B294B;
+  --color-black-1400: #1F242E;
+  --color-black-1500: #171717;
+  --color-black-1600: #141414;
+  --color-black-1700: #363D49;
+  --color-gray24: #737373;
+  --color-green-1000: #E9FCF0;
+  --color-green-1100: #21C45D;
+  --color-green-1200: #20C55D;
+  --color-green-1300: #16A249;
+  --color-green-1400: #2BAB6F;
+  --color-green-1500: #E7F0D8;
+  --color-green-1600: #10B77F;
+  --color-green-1700: #198653;
+  --color-green-1800: #10B981;
+  --color-green-1900: #047857;
+  --color-green-2000: #A7F3D0;
+  --color-green-2100: #166534;
+  --color-green-2200: #D1FAE5;
+  --color-green-2300: #6EE7B7;
+  --color-red-1000: #DC2828;
+  --color-red-1100: #EF4343;
+  --color-red-1200: #DC2626;
+  --color-red-1300: #FECACA;
+  --color-yellow-1100: #F59F0A;
+  --color-yellow-1200: #F59E0B;
+  --color-golden-1000: #493003;
+  /**** NEW *****/
+  --color-gray25: #F2F6F8;
+  /**** NEW *****/
+  /**** NEW *****/
+  --color-green12: #16A34A;
+  /**** NEW *****/
+  --color-green13: #DCFCE7;
+  /**** NEW *****/
+  --color-red12: #EF4444;
+  /**** NEW *****/
+  --color-purple12: #F3E8FF;
+  /**** NEW *****/
+  /*** COLOR NEW ***/
+  --color-yellow12: #F59F0A;
+  --color-green14: #16A249;
+  --color-blue14: #E6F3FF;
+  --color-blue15: #0A95FF;
+  --color-blue16: #EBF6FF;
+  --color-blue17: #0074CC;
+  --color-blue18: #1E81EB;
+  --color-blue19: #F1F7FE;
+  --color-lightblue12: #E6F4F9;
+  --color-black14: #060606;
+  --color-black15: #14181F;
+  --color-black16: #20293C;
+  --color-black17: #0F1729;
+  --color-darkgreen: #15803D;
+  --color-lightgray: #F3F4F6;
+  --color-lightgray12: #20AC6B;
+  --color-gray26: #737B8C;
+  --color-gray27: #E2E4E9;
+  --color-gray28: #EDF0F3;
+  --color-gray29: #F8FAFC;
+  --color-gray30: #6C7993;
+  --color-gray31: #D1D9E0;
+  --color-gray32: #DFE6EC;
+  --color-gray33: #F3F5F7;
+  --color-gray34: #F9FAFB;
+  --color-gray35: #E8F2F7;
+  --color-gray36: #DAE2E7;
+  --color-orange12: #FE7B02;
+  --color-orange-1000: #B45309;
+  --color-orange-1100: #FDE68A;
+  --color-orange-1200: #FFFBEB;
+  --color-orange-1300: #BBF7D0;
+  --color-red12: #EF4343;
+  --color-green14: #10B77F;
+  --color-green15: #20C55D;
+  --color-green16: #1B99A7;
+  /****** LATEST *****/
+  --color-black23: #1D2330;
+  --color-black24: #131720;
+  --color-black25: #1D2530;
+  --color-black26: #303D50;
+  --color-black27: #17171C;
+  --color-black28: #1E273E;
+  --color-yellow22: #B45309;
+  --color-yellow23: #FEF3C7;
+  --color-yellow24: #ECA413;
+  --color-gray37: #627084;
+  --color-gray38: #F3F5F6;
+  --color-gray39: #DAE0E7;
+  --color-gray40: #626D84;
+  --color-gray41: #F6F7F9;
+  --color-gray42: #EAECF0;
+  --color-gray43: #6C7C93;
+  --color-gray44: #EAEDF0;
+  --color-gray45: #E0E6EB;
+  --color-gray46: #797986;
+  --color-gray47: #E4E4E7;
+  --color-gray48: #F4F4F5;
+  --color-gray49: #FCFCFC;
+  --color-gray50: #D3D7DE;
+  --color-blue119: #EBF1FA;
+  --color-blue120: #1B4F98;
+  --color-blue130: #2265C3;
+  --color-blue131: #304FE8;
+  --color-blue132: #E0F5F3;
+  --color-green234: #248F86;
+  --color-green235: #1A6660;
+  --color-green236: #EDF5F7;
+  --color-green237: #156079;
+  --color-green238: #24C278;
+  --color-orange20: #E85530;
+  --color-purple20: #7C3BED;
+  --color-darkBrown: #493204;
+  --shadow-3xl: 0 10px 15px -3px rgba(10, 145, 255, 0.25), 0 4px 6px -4px rgba(10, 145, 255, 0.25);
+  --shadow-4xl: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+  --shadow-5xl: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+  --shadow-6xl: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-7xl: 0 1px 3px 0 rgba(229, 231, 235, 0.40), 0 1px 2px -1px rgba(229, 231, 235, 0.40);
+  --shadow-8xl: 0 4px 46px 0 rgba(0, 0, 0, 0.08), 0 4px 46px 0 rgba(129, 129, 129, 0.08);
+  --shadow-9xl: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --shadow-10xl: 0 1px 3px 0 rgba(15, 23, 41, 0.10), 0 1px 2px -1px rgba(15, 23, 41, 0.10);
+  --shadow-11xl: 0 1px 2px 0 #FFF;
+  --shadow-12xl: 0 4px 6px -1px rgba(15, 23, 41, 0.07), 0 2px 4px -2px rgba(15, 23, 41, 0.05);
+  --shadow-13xl: 0 0 0 2px rgba(10, 137, 255, 0.20), 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-14xl: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-15xl: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+  --shadow-16xl: 0 0 0 1px rgba(10, 149, 255, 0.20);
+  --shadow-17xl: 0 8px 32px -4px rgba(32, 41, 60, 0.12);
+  --shadow-18xl: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+  /*******/
+  --shadow-19xl: 0 4px 6px -1px rgba(29, 35, 48, 0.08), 0 2px 4px -2px rgba(29, 35, 48, 0.05);
+  --shadow-20xl: 0 4px 6px -1px rgba(19, 23, 32, 0.05), 0 2px 4px -2px rgba(19, 23, 32, 0.03);
+  --shadow-21xl: 0 10px 15px -3px rgba(19, 23, 32, 0.08), 0 4px 6px -4px rgba(19, 23, 32, 0.03);
+  --shadow-22xl: 0 1px 2px 0 rgba(29, 37, 48, 0.05);
+  --shadow-23xl: 0 1px 3px 0 rgba(23, 23, 28, 0.04);
+  --shadow-24xl: 0 0 0 2px #F59F0A;
+  --shadow-25xl: 0 0 40px -10px rgba(245, 159, 10, 0.30);
+  /*******/
+  --breakpoint-xs: 390px;
+  --breakpoint-sm: 575px;
+  --breakpoint-md: 767px;
+  --breakpoint-lg: 991px;
+  --breakpoint-xl: 1199px;
+  --breakpoint-2xl: 1365px;
+  --breakpoint-4xl: 1600px;
+}
+
+
+html {
+  overflow: visible !important;
+  padding-right: 0 !important;
+}
+
+.shadow1 {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.setting-sidebar .active img {
+  filter: invert(37%) sepia(92%) saturate(600%) hue-rotate(193deg) brightness(97%) contrast(95%);
+
+}
+
+.card-bg1 {
+  background: linear-gradient(135deg, rgba(10, 145, 255, 0.05) 0%, rgba(10, 145, 255, 0.10) 100%), #FFF;
+}
+
+.card-bg3 {
+  background: linear-gradient(135deg, rgba(245, 159, 10, 0.05) 0%, rgba(245, 159, 10, 0.10) 100%), #FFF;
+}
+
+.card-bg4 {
+  background: linear-gradient(135deg, rgba(22, 162, 73, 0.05) 0%, rgba(22, 162, 73, 0.10) 100%), #FFF;
+}
+
+.card-bg5 {
+  background: linear-gradient(135deg, rgba(239, 67, 67, 0.05) 0%, rgba(239, 67, 67, 0.10) 100%), #FFF;
+}
+
+.card-bg6 {
+  background: linear-gradient(135deg, rgba(239, 67, 67, 0.05) 0%, rgba(239, 67, 67, 0.10) 100%), #FFF;
+}
+
+.header-bg {
+  background: linear-gradient(93deg, #0B64F4 0%, #3C83F6 50%, #2474F5 100%);
+}
+
+.listing-btn img {
+  transition: all 0.5s ease-in-out;
+}
+
+.listing-btn:hover img {
+  filter: invert(37%) sepia(92%) saturate(600%) hue-rotate(193deg) brightness(97%) contrast(95%);
+  transition: all 0.5s ease-in-out;
+}
+
+.group-radio[data-checked] span img {
+  filter: invert(37%) sepia(92%) saturate(600%) hue-rotate(193deg) brightness(97%) contrast(95%);
+}
+
+.filter-img {
+  filter: invert(37%) sepia(92%) saturate(600%) hue-rotate(193deg) brightness(97%) contrast(95%);
+}
+
+.amenities-form .mb-5 {
+  margin-bottom: 0;
+}
+
+.amenities-form label {
+  display: none;
+}
+
+.custom-checkbox:checked {
+  background-color: #2563EB;
+  border-color: #2563EB;
+  background-image: url(/images/check-icon3.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/****/
+.charges-bg {
+  background: linear-gradient(175deg, #0a91ff0d 25%, rgb(10 145 255 / 30%) 77%, #f3f4f6 100%);
+}
+
+.cost-bg {
+  background: linear-gradient(135deg, rgba(48, 79, 232, 0.05) 0%, rgba(48, 79, 232, 0.10) 100%), #FFF;
+
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #F6F7F9;
+  border-radius: 50%;
+  border: 2px solid #0D8CFF;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #F6F7F9;
+  border-radius: 50%;
+  border: 2px solid #0D8CFF;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.swiper-slide-thumb-active img {
+  opacity: 100;
+  border-color: #0D8CFF;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  @apply rounded-full w-9 h-9 flex items-center justify-center backdrop-blur-[2px] bg-black/30 m-0  -translate-y-1/2!
+}
+
+.swiper-button-prev {
+  left: 16px !important;
+  right: auto !important;
+}
+
+.swiper-button-next {
+  right: 16px !important;
+  left: auto !important;
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.swiper-button-prev svg path,
+.swiper-button-next svg path {
+  fill: #fff
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.scrollbar-1 {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.scrollbar-1::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-1::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 999px;
+}
+
+.scrollbar-1::-webkit-scrollbar-thumb:hover {
+  background-color: #94a3b8;
+}

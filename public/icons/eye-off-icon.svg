@@ -1,0 +1,28 @@
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Eye outline -->
+  <path
+    d="M1.374 8.232C1.318 8.082 1.318 7.918 1.374 7.768C1.915 6.456 2.833 5.334 4.013 4.545C5.192 3.755 6.58 3.334 8 3.334C9.42 3.334 10.808 3.755 11.987 4.545C13.167 5.334 14.085 6.456 14.626 7.768C14.682 7.918 14.682 8.082 14.626 8.232C14.085 9.544 13.167 10.666 11.987 11.455C10.808 12.245 9.42 12.666 8 12.666C6.58 12.666 5.192 12.245 4.013 11.455C2.833 10.666 1.915 9.544 1.374 8.232Z"
+    stroke="#6B7280"
+    stroke-width="1.33333"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Pupil -->
+  <path
+    d="M8 10C9.105 10 10 9.105 10 8C10 6.895 9.105 6 8 6C6.895 6 6 6.895 6 8C6 9.105 6.895 10 8 10Z"
+    stroke="#6B7280"
+    stroke-width="1.33333"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Slash (eye off) -->
+  <path
+    d="M2 2L14 14"
+    stroke="#6B7280"
+    stroke-width="1.33333"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
