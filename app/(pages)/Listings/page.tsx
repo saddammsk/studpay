@@ -4,7 +4,6 @@ import { useState } from "react";
 import PrimaryLink from "@/app/ui/PrimaryLink";
 import InputField from "@/app/ui/InputField";
 import DropdownMenu from "@/app/ui/DropdownMenu";
-import DashboardLayout from "@/layouts/DashboardLayout";
 import PropertyListings from "@/app/components/ListingComponents/PropertyListings";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store/store";
@@ -35,7 +34,6 @@ export default function Listing() {
 
 
   return (
-    <DashboardLayout title="Listings" showWallet={false} className={"bg-gray-1900"}>
       <div className="pl-3 md:pr-9 pr-3 pt-6 pb-56">
         <div className="flex items-center justify-between">
           <div className="">
@@ -90,6 +88,5 @@ export default function Listing() {
 
         <PropertyListings view={view} searchQuery={searchQuery} statusFilter={statusFilter} />
       </div>
-    </DashboardLayout>
   );
 }

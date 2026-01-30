@@ -4,12 +4,14 @@ import notificationsReducer from "./slices/notificationsSlice";
 import dashboardReducer from "./slices/dashboardSlice";
 import userReducer from "./slices/userSlice";
 import listReducer from "./slices/listingsSlice";
+import guaranteeReducer from './slices/guaranteeSlice';
   
 export const store = configureStore({
   reducer: {
     navigation: navigationReducer,
     notifications: notificationsReducer,
     dashboard: dashboardReducer,
+    guarantees: guaranteeReducer,
     listings: listReducer,
     users: userReducer,
   },

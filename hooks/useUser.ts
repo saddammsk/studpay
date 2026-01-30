@@ -1,3 +1,4 @@
+'use client'
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { fetchUsers } from "@/store/slices/userSlice";

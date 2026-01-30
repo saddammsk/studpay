@@ -70,7 +70,7 @@
           },
                {
             "id": "act_103",
-            "type": "application",
+            "type": "upcoming-move-in",
             "title": "Upcoming move-in",
             "property": "Emma Martin - Tomorrow at 10:00",
             "time": "2 min ago"
@@ -235,6 +235,73 @@
          "price": "€1450/mo"
         
       }
+    ]
+  },
+
+  
+  "stud-guarantee": {
+        "items": [
+      {
+        "id": 1,
+        "title": "Résidence Les Jardins",
+        "price": "€1,200.00",
+        "status": "Active",
+        "tenant": "Marie Dupont",
+        "type": "Deposit",
+        "period": "01 Sept 2024 — 31 Aug 2025",
+        "disabled": false
+      },
+      {
+        "id": 2,
+        "title": "Studio Belleville",
+        "price": "€2,400.00",
+        "status": "Active",
+        "tenant": "Lucas Martin",
+        "type": "Full Coverage",
+        "period": "15 Oct 2024 — 14 Oct 2025",
+        "disabled": false
+      },
+      {
+        "id": 3,
+        "title": "Appartement République",
+        "price": "€800.00",
+        "status": "Expired",
+        "tenant": "Emma Bernard",
+        "type": "Rent",
+        "period": "01 Sept 2023 — 31 Aug 2024",
+        "disabled": true
+      },
+      {
+        "id": 4,
+        "title": "Chambre Étudiante Lyon",
+        "price": "€600.00",
+        "status": "Pending",
+        "tenant": "Emma Bernard",
+        "type": "Rent",
+        "period": "01 Sept 2023 — 31 Aug 2024",
+        "disabled": true
+      },
+      {
+        "id": 5,
+        "title": "Colocation Montmartre",
+        "price": "€1,800.00",
+        "status": "Active",
+        "tenant": "Sophie Moreau",
+        "type": "Full Coverage",
+        "period": "01 Jun 2024 — 31 May 2025",
+        "disabled": false
+      },
+      {
+        "id": 6,
+        "title": "T2 Nation",
+        "price": "€950.00",
+        "status": "Expired",
+        "tenant": "Alexandre Petit",
+        "type": "Rent",
+        "period": "01 Mar 2023 — 29 Feb 2024",
+        "disabled": true
+      }
+
     ]
   }
 }

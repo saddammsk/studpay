@@ -1,7 +1,6 @@
 "use client"
 import VerifyPropertyModel from '@/app/components/ListingComponents/VerifyPropertyModel'
 import PrimaryLink from '@/app/ui/PrimaryLink'
-import DashboardLayout from '@/layouts/DashboardLayout'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -12,7 +11,7 @@ const ListingDetailPage = () => {
 
 
   return (
-    <DashboardLayout className="bg-gray-1900" showWallet={false} title="Listings">
+        <div className="flex-1">
          <div className="pl-3 xl:pr-9 pr-3 py-6">
           <div className="flex items-center justify-between">
             <div className="">
@@ -186,8 +185,7 @@ const ListingDetailPage = () => {
         </div>
 
         <VerifyPropertyModel isOpenVerify={isOpenVerify} setIsOpenVerify={setIsOpenVerify} />
-            
-    </DashboardLayout>
+        </div>
   )
 }
 

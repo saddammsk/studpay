@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Sidebar from "@/app/components/Sidebar";
+import Sidebar from "@/app/components/common/Sidebar";
 import UserDropMenu from "@/app/components/UserDropMenu";
 import PrimaryLink from "@/app/ui/PrimaryLink";
 import SettingSidebar from "@/app/components/SettingSidebar";

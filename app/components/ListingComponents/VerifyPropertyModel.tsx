@@ -512,7 +512,7 @@ const VerifyPropertyModel = ({ isOpenVerify, setIsOpenVerify }: { isOpenVerify: 
                         </form>
                   </DialogPanel>
                 </div>
-              </Dialog>
+      </Dialog>
   )
 }
 

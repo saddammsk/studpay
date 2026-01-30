@@ -1,67 +1,21 @@
-"use client";
 
-import { useState } from "react";
-import InputField from "@/app/ui/InputField";
 import Link from "next/link";
-import PrimaryLink from "@/app/ui/PrimaryLink";
-import { OnboardingLeftCol } from "@/app/components/common/OnboardingLeftCol";
-import { useRouter } from "next/navigation";
+import AuthLayout from "@/layouts/AuthLayout";
+import { ForgetPasswordForm } from "./_components/ForgetPasswordForm";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: 'Forget Password - Partner Portal',
+  description: 'Manage rent collection, deposits, and financial reporting in one unified platform.',
+}
 
 function ForgetPasswordPage() {
 
-     const [email, setEmail] = useState("");
-     const [errors, setErrors] = useState<Record<string, string>>({});
-     const [isSubmitting, setIsSubmitting] = useState(false);
-     const route = useRouter();
-
-const validateForm = () => {
-     const newErrors: Record<string, string> = {};
-
-     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-     if (!email) {
-          newErrors.email = 'Email is required';
-     } else if (!emailRegex.test(email)) {
-          newErrors.email = 'Invalid email format';
-     }
-
-     setErrors(newErrors);
-     return Object.keys(newErrors).length === 0;
-};
-
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-     e.preventDefault();
-     
-     if (!validateForm()) {
-          return;
-     }
-     
-     setIsSubmitting(true);
-     
-     try {
-          // Your API call here
-          const response = await fetch('/api/send-verification-code', {
-               method: 'POST',
-               headers: { 'Content-Type': 'application/json' },
-               body: JSON.stringify({ email })
-          });
-          
-          if (response.ok) {
-               console.log('Verification code sent to:', email);
-               route.push('/');
-          } else {
-               setErrors({ email: 'Failed to send verification code' });
-          }
-     } catch (error) {
-          setErrors({ email: 'Error sending verification code' });
-     } finally {
-          setIsSubmitting(false);
-     }
-};
 
 
      return (
-          <div className='flex font-dm-sans h-screen overflow-hidden'>
-             <OnboardingLeftCol/>
+          <AuthLayout>
                <div className='lg:w-1/2 w-full lg:px-0 px-5 4xl:py-0 lg:py-10 py-0 overflow-auto scroll-hide'>
                     <div className="h-screen flex items-center justify-center">
                          <div className='w-full max-w-[448px]'>
@@ -99,34 +53,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                                              <p className='mt-1 text-sm font-normal leading-5 text-gray-1000'>Enter your email address and {"we'll"} send you a verification
                                                   code</p>
                                         </div>
-                                         <form onSubmit={handleSubmit} className='mt-6'>
-                                        <div className="mb-5">
-                                             <InputField
-                                                  label="Email address"
-                                                  placeholder="you@company.com"
-                                                  value={email}
-                                                  onChange={(e) => {
-                                                       setEmail(e.target.value);
-                                                       if (errors.email) {
-                                                            setErrors((prev) => ({ ...prev, email: "" }));
-                                                       }
-                                                  }}
-                                                  leftIconSrc="/images/msg-icon.svg"
-                                                  id="email"
-                                                  name="email"
-                                             />
-                                             {errors.email && (
-                                                  <p className="text-red-500 text-xs mt-1">{errors.email}</p>
-                                             )}
-                                        </div>
-                                        <PrimaryLink 
-                                             type="submit"
-                                             variant={ email && !isSubmitting ? "primary": "disabled" }
-                                             disabled={!email || isSubmitting}
-                                        >
-                                             {isSubmitting ? 'Sending...' : 'Send verification code'}
-                                        </PrimaryLink>
-                                   </form>
+
+                                        <ForgetPasswordForm/>
+
                                          <Link href="/Login" className="text-sm group mt-6 font-dm-sans flex items-center justify-center gap-2 font-normal leading-5 text-gray-1000">
                                                   <img src="/images/left-arrow.svg" className="group-hover:-translate-x-1 transition duration-300" alt="" />Back to sign in</Link>
                                    </div>
@@ -141,7 +70,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
                          </div>
                     </div>
                </div>
-          </div>
+          </AuthLayout>
      )
 }
 

@@ -1,20 +1,22 @@
-"use client";
+'use client'
 import { useState } from "react";
-import Sidebar from "@/app/components/Sidebar";
-import UserDropMenu from "@/app/components/UserDropMenu";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
-import Link from "next/link";
 import CircularProgress from "@/app/components/CircularProgress";
 import ProgressBar from "@/app/ui/ProgressBar";
 import PrimaryLink from "@/app/ui/PrimaryLink";
 import InputField from "@/app/ui/InputField";
 import { Checkbox } from '@headlessui/react';
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import DashboardLayout from "@/layouts/DashboardLayout";
+import Link from "next/link";
+
+
+
 type Requirement = {
      id: number;
      label: string;
 };
+
+
 type Reject = {
      id: number;
      label: string;
@@ -67,6 +69,7 @@ const cardData = [
           weight: "12%",
      },
 ];
+
 const documentsData = [
      {
           title: "Identification",
@@ -95,6 +98,7 @@ const documentsData = [
           ],
      },
 ];
+
 type ItemStatus = "ok" | "issue" | null;
 
 
@@ -104,7 +108,9 @@ interface ChecklistItem {
      status: ItemStatus;
 }
 
-export default function ApplicationReview() {
+export default function ApplicationReviewPage() {
+
+
      const [items, setItems] = useState<ChecklistItem[]>([
           { id: 1, label: "Sofa & Cushions", status: null },
           { id: 2, label: "TV & Electronics", status: null },
@@ -115,7 +121,6 @@ export default function ApplicationReview() {
 
      const [notes, setNotes] = useState("");
 
-
      const updateStatus = (id: number, status: ItemStatus) => {
           setItems((prev) =>
                prev.map((item) =>
@@ -123,9 +128,8 @@ export default function ApplicationReview() {
                )
           );
      };
-     const [isOpen, setIsOpen] = useState(false);
-     const [name, setName] = useState("");
 
+     const [name, setName] = useState("");
      const [requestChecked, setRequestChecked] = useState<number[]>([]);
      const [rejectChecked, setRejectChecked] = useState<number[]>([]);
 
@@ -159,11 +163,12 @@ export default function ApplicationReview() {
           { id: 4, label: "Failed document verification" },
           { id: 5, label: "Other (specify below)" },
      ];
+
+
      return (
-          <DashboardLayout title="Application Review" className="bg-gray-1900" showWallet={false}>
           <div className="xl:py-6 xl:pl-8 4xl:pr-10 xl:px-4 p-4 font-inter">
                <div className="mb-6">
-                    <Link href="/" className="flex items-center gap-3 text-sm font-inter font-medium text-gray-1000 py-2.5 px-3"><img src="/images/left-arrow.svg" alt="" /> Back to Applications</Link>
+                    <Link href="/Applications" className="flex items-center gap-3 text-sm font-inter font-medium text-gray-1000 py-2.5 px-3"><img src="/images/left-arrow.svg" alt="" /> Back to Applications</Link>
                     <h4 className="text-2xl font-bold leading-8 text-black-1200 mb-1 mt-1.5">Applications</h4>
                     <p className="text-base font-inter font-normal leading-6 text-gray-2200">Review and manage student rental applications with AI-powered risk assessment</p>
                </div>
@@ -1885,6 +1890,5 @@ export default function ApplicationReview() {
                     </TabPanels>
                </TabGroup>
           </div>
-          </DashboardLayout>
      );
 }

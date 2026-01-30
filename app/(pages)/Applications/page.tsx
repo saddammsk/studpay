@@ -3,7 +3,6 @@ import { useState } from "react";
 import InputField from "@/app/ui/InputField";
 import StatusDropdown from "@/app/components/StatusDropdown";
 import ApplicationTable from "@/app/components/ApplicationTable";
-import DashboardLayout from "@/layouts/DashboardLayout";
 
 
 export default function ApplicationsPage() {
@@ -12,7 +11,6 @@ export default function ApplicationsPage() {
 
 
      return (
-          <DashboardLayout title="Applications" className="bg-gray-1900"  showWallet={false}>
                <div className="xl:py-6 xl:pl-8 4xl:pr-10 xl:px-4 p-4">
                     <div className="mb-6">
                          <h4 className="text-2xl font-bold leading-8 text-black-1200 mb-1">Applications</h4>
@@ -66,6 +64,5 @@ export default function ApplicationsPage() {
                          <h6 className="text-sm font-inter leading-5 text-gray-1000">2 pending review</h6>
                     </div>
                </div>
-          </DashboardLayout>
      );
 }

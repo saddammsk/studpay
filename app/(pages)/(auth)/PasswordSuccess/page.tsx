@@ -1,13 +1,19 @@
 
 import Link from "next/link";
 import PrimaryLink from "@/app/ui/PrimaryLink";
-import { OnboardingLeftCol } from "@/app/components/common/OnboardingLeftCol";
+import AuthLayout from "@/layouts/AuthLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Password Changed Successfully - Partner Portal',
+  description: 'Manage rent collection, deposits, and financial reporting in one unified platform.',
+}
+
 
 function PasswordSuccess() {
  
      return (
-          <div className='flex font-dm-sans h-screen overflow-hidden'>
-              <OnboardingLeftCol/>
+          <AuthLayout>
                <div className='lg:w-1/2 w-full lg:px-0 px-5 4xl:py-0 lg:py-10 py-0 overflow-auto scroll-hide'>
                     <div className="h-screen flex items-center justify-center">
                          <div className='w-full max-w-[448px]'>
@@ -61,7 +67,7 @@ function PasswordSuccess() {
                          </div>
                     </div>
                </div>
-          </div>
+          </AuthLayout>
      )
 }
 

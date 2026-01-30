@@ -1,9 +1,10 @@
-import UserDropMenu from '../components/UserDropMenu';
+'use client'
+import UserDropMenu from '../UserDropMenu';
 import { toggleMenu } from "@/store/slices/navigationSlice";
 import { useAppDispatch } from '@/store/hooks';
 import { useUser } from '@/hooks/useUser';
 import Link from 'next/link';
-import { NotificationDropdown } from './NotificationDropdown';
+import { NotificationDropdown } from '../../ui/NotificationDropdown';
 
 export const Header = ({title, showWallet, userId="user_001"}: {title: string, showWallet: boolean, userId?: string}) => {
 
