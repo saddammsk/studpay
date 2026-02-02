@@ -6,7 +6,7 @@ import { useUser } from '@/hooks/useUser';
 import Link from 'next/link';
 import { NotificationDropdown } from '../../ui/NotificationDropdown';
 
-export const Header = ({title, showWallet, userId="user_001"}: {title: string, showWallet: boolean, userId?: string}) => {
+export const Header = ({title, showWallet = false, userId="user_001"}: {title: string, showWallet?: boolean, userId?: string}) => {
 
   const dispatch = useAppDispatch();
   const { user, balance, avatarUrl, initials, hasProfilePicture, loading } = useUser(userId);
@@ -22,9 +22,14 @@ export const Header = ({title, showWallet, userId="user_001"}: {title: string, s
       <header className="fixed top-0 left-0 z-40 w-full border-b border-solid border-gray-1100 bg-white xl:pl-64 md:pl-50 py-[7.5px]">
         <div className="xl:px-6 md:px-3 px-4 flex items-center justify-between">
           <div className="">
+            {title.length > 0 &&
+            <>
             <h4 className="text-black-1000 font-dm-sans font-semibold md:text-lg text-base md:leading-7 leading-5 tracking-[-0.45px]">{title}</h4>
+          
             <p className="text-gray-1000 font-dm-sans font-normal md:text-sm text-xs leading-5">Welcome back, {user?.name}</p>
-          </div>
+          </>
+          }
+            </div>
           <div className="flex items-center md:gap-4 gap-2.5">
             {showWallet &&
             <div className="">

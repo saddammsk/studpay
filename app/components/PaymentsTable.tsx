@@ -74,7 +74,7 @@ const payments: Payment[] = [
 export default function PaymentsTable() {
      return (
           <div className="overflow-x-auto mt-5 border border-gray-2400 rounded-xl">
-               <table className="2xl:w-full w-[1365px] text-sm">
+               <table className="2xl:w-full w-341.25 text-sm">
                     <thead className="bg-gray-1900 text-gray24 font-inter font-bold">
                          <tr>
                               <th className="px-4 py-3 text-left">Student</th>
@@ -91,7 +91,7 @@ export default function PaymentsTable() {
                          {payments.map((item) => (
                               <tr key={item.id} className="border-t border-gray-2400">
                                    {/* Student */}
-                                   <td className="px-6 py-[14px]">
+                                   <td className="px-6 py-3.5">
                                         <div className="flex items-center gap-3">
                                              <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-semibold">
                                                   {item.student.initials}
@@ -101,7 +101,7 @@ export default function PaymentsTable() {
                                    </td>
 
                                    {/* Property */}
-                                   <td className="px-6 py-[14px]">
+                                   <td className="px-6 py-3.5">
                                         <div className="flex items-center gap-3">
                                              <Image
                                                   src={item.property.image}
@@ -120,18 +120,18 @@ export default function PaymentsTable() {
                                    </td>
 
                                    {/* Amount */}
-                                   <td className="px-6 py-[14px] text-base font-bold leading-6 text-black-1000">
+                                   <td className="px-6 py-3.5 text-base font-bold leading-6 text-black-1000">
                                         {item.amount}
                                    </td>
 
                                    {/* Method */}
-                                   <td className="px-6 py-[14px] text-base font-normal leading-6 text-gray-1400">
+                                   <td className="px-6 py-3.5 text-base font-normal leading-6 text-gray-1400">
                                         {item.method}
                                    </td>
 
                                    {/* Status */}
                                    {/* Status */}
-                                   <td className="px-6 py-[14px]">
+                                   <td className="px-6 py-3.5">
                                         <span
                                              className={`px-2 py-1 w-fit rounded-full flex items-center gap-1.5 text-xs font-medium ${statusConfig[item.status].classes
                                                   }`}
@@ -148,12 +148,12 @@ export default function PaymentsTable() {
 
 
                                    {/* Date */}
-                                   <td className="px-6 py-[14px]  text-base font-normal leading-6 text-gray-1400">
+                                   <td className="px-6 py-3.5 text-base font-normal leading-6 text-gray-1400">
                                         {item.date}
                                    </td>
 
                                    {/* More */}
-                                   <td className="px-6 py-[14px]">
+                                   <td className="px-6 py-3.5">
                                         <button className="text-gray-400 hover:text-gray-600">
                                              •••
                                         </button>

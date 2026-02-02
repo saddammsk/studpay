@@ -16,7 +16,7 @@ const ApplicationsLayout = ({ children }: DashboardLayoutProps) => {
      
 
   return (
-    <main className={`font-dm-sans xl:pl-64 md:pl-50 pt-16 bg-gray-1900`}>
+    <main className={`font-dm-sans xl:pl-64 md:pl-50 pt-16 bg-gray-1900 min-h-screen`}>
         <Sidebar />  
         <Header title={"Applications"} showWallet={false} />
 

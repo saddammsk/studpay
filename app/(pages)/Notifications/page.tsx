@@ -2,11 +2,17 @@
 import NotificationsTabs from "@/app/components/NotificationsTabs";
 import Link from "next/link";
 import DashboardLayout from "@/layouts/DashboardLayout";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Notifications - Partner Portal',
+  description: 'Manage notifications and alerts in the partner portal.',
+}
 
 export default function Notifications() {
 
   return (
-    <DashboardLayout className="bg-gray-1900" title="Notifications" showWallet={false}>
+    <DashboardLayout className="bg-gray-1900" title="Notifications">
       <div className="xl:pl-12 xl:pr-6 p-4 xl:py-14 py-7">
         <div className="flex sm:flex-row flex-col sm:items-center items-start sm:gap-0 gap-4 justify-between border-b border-solid border-gray17 pb-6">
           <div className="flex items-center gap-3">

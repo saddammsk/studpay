@@ -17,8 +17,8 @@ function SettingSidebar() {
                <ul className="p-3 space-y-1 lg:block flex lg:w-auto w-[780px]">
                     <li>
                          <Link
-                              href="/Setting/Profile"
-                              className={`${baseClass} ${pathname === "/Setting/Profile" ? activeClass : inactiveClass}`}
+                              href="/Settings/Profile"
+                              className={`${baseClass} ${pathname === "/Settings/Profile" ? activeClass : inactiveClass}`}
                          >
                               <img src="/images/profile-icon.svg" alt="" />
                               Profile
@@ -27,8 +27,8 @@ function SettingSidebar() {
 
                     <li>
                          <Link
-                              href="/Setting/Billing"
-                              className={`${baseClass} ${pathname === "/Setting/Billing" ? activeClass : inactiveClass}`}
+                              href="/Settings/Billing"
+                              className={`${baseClass} ${pathname === "/Settings/Billing" ? activeClass : inactiveClass}`}
                          >
                               <img src="/images/wallet-icon.svg" alt="" />
                               Bank & Billing
@@ -37,8 +37,8 @@ function SettingSidebar() {
 
                     <li>
                          <Link
-                              href="/Setting/Security"
-                              className={`${baseClass} ${pathname === "/Setting/Security" ? activeClass : inactiveClass}`}
+                              href="/Settings/Security"
+                              className={`${baseClass} ${pathname === "/Settings/Security" ? activeClass : inactiveClass}`}
                          >
                               <img src="/images/shield-icon2.svg" alt="" />
                               Security
@@ -47,8 +47,8 @@ function SettingSidebar() {
 
                     <li>
                          <Link
-                              href="/Setting/Notifications"
-                              className={`${baseClass} ${pathname === "/Setting/Notifications" ? activeClass : inactiveClass}`}
+                              href="/Settings/Notifications"
+                              className={`${baseClass} ${pathname === "/Settings/Notifications" ? activeClass : inactiveClass}`}
                          >
                               <img src="/images/bell-icon.svg" alt="" />
                               Notifications
@@ -57,8 +57,8 @@ function SettingSidebar() {
 
                     <li>
                          <Link
-                              href="/Setting/Teams"
-                              className={`${baseClass} ${pathname === "/Setting/Teams" ? activeClass : inactiveClass}`}
+                              href="/Settings/Team"
+                              className={`${baseClass} ${pathname === "/Settings/Team" ? activeClass : inactiveClass}`}
                          >
                               <img src="/images/user-icon.svg" alt="" />
                               Team & Access

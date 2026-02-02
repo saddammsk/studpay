@@ -64,8 +64,11 @@ const statsCards = [
      },
 ];
 
+
+
 export default function FinancesPage() {
 
+     
      return (
      <div className="xl:py-6 xl:pl-8 4xl:pr-10 xl:px-4 p-4">
           <div className="flex items-center sm:flex-nowrap flex-wrap sm:gap-0 gap-4 justify-between mb-10">

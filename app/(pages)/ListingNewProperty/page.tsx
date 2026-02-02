@@ -1,8 +1,6 @@
 "use client";
 import * as React from "react"
 import { useState } from "react";
-import Sidebar from "@/app/components/common/Sidebar";
-import UserDropMenu from "@/app/components/UserDropMenu";
 import { GeneralStep } from "@/app/components/NewPropertySteps/GeneralStep";
 import { PropertyDetailsStep } from "@/app/components/NewPropertySteps/PropertyDetailsStep";
 import { PropertyCharacteristicsStep } from "@/app/components/NewPropertySteps/PropertyCharacteristicsStep";
@@ -16,13 +14,12 @@ import { PropertyMediaVirtualTour } from "@/app/components/NewPropertySteps/Prop
 import { PropertyMediaUploadVideo } from "@/app/components/NewPropertySteps/PropertyMediaUploadVideo";
 import { PropertyMediaStudpayTool } from "@/app/components/NewPropertySteps/PropertyMediaStudpayTool";
 import { PropertyMediaBoostCredibility } from "@/app/components/NewPropertySteps/PropertyMediaBoostCredibility";
+import { PropertyVisibilityBoost } from "@/app/components/NewPropertySteps/PropertyVisibilityBoost";
 import { Progress } from "@/app/ui/progress"
-import PrimaryLink from "@/app/ui/PrimaryLink";
 import Link from "next/link";
 
 
 export default function Listing() {
-      const [isOpen, setIsOpen] = useState(false);
       const [progress, setProgress] = React.useState(100)
       React.useEffect(() => {
             const timer = setTimeout(() => setProgress(16), 500)
@@ -31,40 +28,7 @@ export default function Listing() {
 
       return (
             <div className="bg-gray15 font-dm-sans xl:pl-64 md:pl-50 pt-16">
-                  <Sidebar isOpen={isOpen} />
-                  <header className="fixed top-0 left-0 z-10 w-full border-b border-solid border-gray-1100 bg-white xl:pl-64 md:pl-50 py-[7.5px]">
-                        <div className="xl:px-6 md:px-3 px-4 flex items-center justify-between">
-                              <div className="">
-                                    <h4 className="text-black-1000 font-dm-sans font-semibold md:text-lg text-base md:leading-7 leading-5 tracking-[-0.45px]">Notifications</h4>
-                                    <p className="text-gray-1000 font-dm-sans font-normal md:text-sm text-xs leading-5">Welcome back, Partner</p>
-                              </div>
-                              <div className="flex items-center md:gap-4 gap-2.5">
-                                    <div className="">
-                                          <a href="#" className="flex items-center justify-center md:gap-2 text-black-1000 font-medium text-sm rounded-lg bg-gray-1200 leading-5 md:px-4 md:py-2.5 md:w-auto md:h-auto w-6 h-6">
-                                                <img src="../images/wallet.svg" alt="" className="md:h-auto h-3.5" />
-                                                <span className="md:flex hidden items-center">€12 450,00</span>
-                                          </a>
-                                    </div>
-                                    <a href="#" className="flex items-center justify-center md:w-10 w-6 md:h-10 h-6 relative rounded-md">
-                                          <img src="../images/notification-icon.svg" alt="" className="md:h-auto h-3.5" />
-                                          <span className="text-white absolute -top-1 -right-1 flex items-center justify-center font-medium md:text-xs text-[10px] leading-4 bg-blue-1100 md:w-5 w-4 md:h-5 h-4 rounded-full">3</span>
-                                    </a>
-                                    <UserDropMenu />
-                                    <a
-                                          href="#"
-                                          onClick={(e) => {
-                                                e.preventDefault();
-                                                setIsOpen(!isOpen);
-                                          }}
-                                          className="md:hidden flex items-center"
-                                    >
-                                          <img src="../images/menu-icon.svg" alt="" className="h-5" />
-                                    </a>
-
-
-                              </div>
-                        </div>
-                  </header>
+        
                   <div className="pl-3 xl:pr-9 pr-3 py-6">
                         <div className="max-w-6xl w-full mx-auto">
                               <div className="mb-6">
@@ -98,7 +62,7 @@ export default function Listing() {
                                           </div>
                                     </div>
                                     <form>
-                                          <div className="hidden">
+                                          <div className="">
                                                 <GeneralStep />
                                           </div>
                                           <div className="hidden">
@@ -136,8 +100,11 @@ export default function Listing() {
                                                       <PropertyMediaStudpayTool />
                                                 </div>
                                           </div>
-                                          <div className="">
+                                          <div className="hidden">
                                                 <PropertyMediaBoostCredibility />
+                                          </div>
+                                          <div className="hidden">
+                                                <PropertyVisibilityBoost />
                                           </div>
                                           <div className="bg-white rounded-2xl shadow-14xl p-4 flex sm:flex-row flex-col items-center justify-between mt-6">
                                                 <div className="flex items-center gap-2">
@@ -149,9 +116,9 @@ export default function Listing() {
                                                             <Link href={'#'} className="inline-flex items-center justify-center bg-gray35 border border-solid border-gray36 rounded-[10px] h-10 px-4 text-black font-outfit font-medium text-sm leading-4 sm:w-auto w-full">Save & Exit</Link>
                                                       </li>
                                                       <li>
-                                                            <PrimaryLink href="#" className="h-10 sm:w-auto! w-full! inline-flex px-8 bg-blue12 text-white">
+                                                            <Link href="#" className="h-10 sm:w-auto! w-full! inline-flex px-8 bg-blue12 text-white">
                                                                   Continue
-                                                            </PrimaryLink>
+                                                            </Link>
                                                       </li>
                                                 </ul>
                                           </div>

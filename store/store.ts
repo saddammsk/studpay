@@ -5,6 +5,7 @@ import dashboardReducer from "./slices/dashboardSlice";
 import userReducer from "./slices/userSlice";
 import listReducer from "./slices/listingsSlice";
 import guaranteeReducer from './slices/guaranteeSlice';
+import profileReducer from './slices/Profileslice';
   
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     guarantees: guaranteeReducer,
     listings: listReducer,
     users: userReducer,
+    profile: profileReducer,
   },
 });
 

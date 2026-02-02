@@ -33,24 +33,24 @@ const PrimaryLink: React.FC<AuthButtonProps> = ({
      onClick,
 }) => {
      const baseClasses =
-          "w-full py-2.5 px-4 flex items-center cursor-pointer justify-center rounded-lg font-medium text-sm leading-5 transition-all duration-500 ease-in-out hover:shadow-3xl";
+          "w-full py-2.5 px-4 flex items-center justify-center rounded-lg font-medium text-sm leading-5 transition-all duration-500 ease-in-out hover:shadow-3xl";
 
      const variants: Record<ButtonVariant, string> = {
-          primary: "bg-blue-1000 text-white hover:bg-blue-1000/[90%]",
+          primary: "bg-blue-1000 cursor-pointer text-white hover:bg-blue-1000/[90%]",
           secondary:
-               "bg-gray-1200 text-blue-1100 hover:bg-blue-1000/[90%] hover:text-white",
+               "bg-gray-1200 cursor-pointer text-blue-1100 hover:bg-blue-1000/[90%] hover:text-white",
           default:
-               "bg-white text-black-1000 hover:bg-blue-1000/[90%] hover:text-white",
+               "bg-white cursor-pointer text-black-1000 hover:bg-blue-1000/[90%] hover:text-white",
           disabled:
                "bg-blue-1000 text-white cursor-not-allowed opacity-50 hover:shadow-none",
           primaryborder:
-               "bg-blue-1300 border border-blue-1000/[20%] text-blue-1100 hover:bg-blue-1000/[90%] hover:text-white",
+               "bg-blue-1300 cursor-pointer border border-blue-1000/[20%] text-blue-1100 hover:bg-blue-1000/[90%] hover:text-white",
           success:
-               "bg-green-1700 text-white hover:bg-blue-1000/[90%] hover:text-white",
+               "bg-green-1700 cursor-pointer text-white hover:bg-blue-1000/[90%] hover:text-white",
           bluebtn:
-               "bg-black-1300 text-white hover:bg-blue-1000/[90%] hover:text-white",
+               "bg-black-1300 cursor-pointer text-white hover:bg-blue-1000/[90%] hover:text-white",
           cancel:
-               "bg-gray-1600 text-black-1200 border border-gray-3300 hover:bg-gray-3300/50 hover:shadow-md",
+               "bg-gray-1600 cursor-pointer text-black-1200 border border-gray-3300 hover:bg-gray-3300/50 hover:shadow-md",
      };
 
      const classes = clsx(baseClasses, variants[variant], className);

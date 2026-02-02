@@ -38,6 +38,9 @@
   --color-gray-3900: #FAF3E5;
   --color-gray-4000: #FBFAF9;
   --color-gray-4100: #E9EAED;
+  --color-gray-4200: #F3F5F733;
+  --color-gray-4300: #E6E6E6;
+  --color-gray-4400: #303A50;
   --color-blue-1000: #0A91FF;
   --color-blue-1100: #0D8CFF;
   --color-blue-1200: #0B64F4;
@@ -77,6 +80,7 @@
   --color-red-1100: #EF4343;
   --color-red-1200: #DC2626;
   --color-red-1300: #FECACA;
+  --color-red-1400: #FF4040;
   --color-yellow-1100: #F59F0A;
   --color-yellow-1200: #F59E0B;
   --color-golden-1000: #493003;
@@ -93,6 +97,8 @@
   --color-blue17: #0074CC;
   --color-blue18: #1E81EB;
   --color-blue19: #F1F7FE;
+  --color-blue20: #0A5ADB;
+  --color-blue20: #0A5ADB;
   --color-lightblue12: #E6F4F9;
   --color-black14: #060606;
   --color-black15: #14181F;
@@ -159,6 +165,36 @@
   --color-orange20: #E85530;
   --color-purple20: #7C3BED;
   --color-darkBrown: #493204;
+  --color-gray51: #627384;
+  --color-gray52: #D9E0E8;
+  --color-gray53: #E4EDF1;
+  --color-gray54: #E0E5EB;
+  --color-gray55: #D7E4EA;
+  --color-gray562: #EDF0F2;
+  --color-blue133: #0070CC;
+  --color-blue134: #E6F4FF;
+  --color-blue135: #E2EDF3;
+  --color-blue136: #E6F3F9;
+  --color-blue137: #EBF5FA;
+  --color-blue138: #ECF4F9;
+  --color-blue139: #ECF6FD;
+  --color-purple13: #6B26D9;
+  --color-purple14: #A855F7;
+  --color-yellow40: #FACC15;
+  --color-yellow41: #FFFBEB;
+  --color-yellow42: #FDE68A;
+  --color-black245: #1D2025;
+  --color-green238: #047857;
+  --color-green239: #A7F3D0;
+  --color-green240: #10B981;
+  --color-green241: #D1FAE5;
+  --color-greenlight: #22C35D;
+  --color-red40: #DC2626;
+  --color-red41: #B91C1C;
+  --color-red42: #FEF2F2;
+  --color-darkgray12: #4B5563;
+
+
   --shadow-3xl: 0 10px 15px -3px rgba(10, 145, 255, 0.25), 0 4px 6px -4px rgba(10, 145, 255, 0.25);
   --shadow-4xl: 0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
   --shadow-5xl: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
@@ -181,7 +217,16 @@
   --shadow-22xl: 0 1px 2px 0 rgba(29, 37, 48, 0.05);
   --shadow-23xl: 0 1px 3px 0 rgba(23, 23, 28, 0.04);
   --shadow-24xl: 0 0 0 2px #F59F0A;
+
   --shadow-25xl: 0 0 40px -10px rgba(245, 159, 10, 0.30);
+  --shadow-26xl: 0 4px 6px -1px #FFF, 0 2px 4px -2px #FFF;
+  --shadow-27xl: 0 0 0 4px rgba(10, 145, 255, 0.30), 0 20px 25px -5px rgba(0, 0, 0, 0.10), 0 8px 10px -6px rgba(0, 0, 0, 0.10);
+  --shadow-284xl: 0 2px 8px -2px rgba(0, 0, 0, 0.08);
+  --shadow-29xl: 0 4px 16px -4px rgba(0, 0, 0, 0.10);
+  --shadow-30xl: 0 0 0 2px #E6F3F9, 0 0 0 4px #0A91FF;
+  --shadow-31xl: 0 1px 3px 0 rgba(20, 24, 31, 0.04), 0 4px 12px 0 rgba(20, 24, 31, 0.06);
+  --shadow-32xl: 0 0 0 2px #ECF4F9;
+
   --breakpoint-xs: 390px;
   --breakpoint-sm: 575px;
   --breakpoint-md: 767px;
@@ -189,6 +234,7 @@
   --breakpoint-xl: 1199px;
   --breakpoint-2xl: 1365px;
   --breakpoint-4xl: 1600px;
+
 }
 
 
@@ -365,4 +411,25 @@ input[type="number"] {
 
 .scrollbar-1::-webkit-scrollbar-thumb:hover {
   background-color: #94a3b8;
+}
+
+
+.bg-gradient {
+  background: linear-gradient(135deg, rgba(10, 145, 255, 0.20) 0%, #E6F4FF 100%);
+}
+
+.bg-gradient2 {
+  background: linear-gradient(135deg, #E6F4FF 0%, #E6F4FF 100%);
+}
+
+.bg-gradient3 {
+  background: linear-gradient(101deg, #6B26D9 0%, #9117CF 100%);
+}
+
+.search-feild .mb-5 {
+  margin: 0 !important;
+}
+
+.search-feild .mb-5 label {
+  display: none;
 }

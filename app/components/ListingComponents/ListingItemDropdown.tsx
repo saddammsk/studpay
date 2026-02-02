@@ -8,7 +8,7 @@ export default function ListingItemDropdown() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <Menu.Button className="flex items-center justify-center w-8 h-8 rounded-[10px] bg-white hover:bg-blue-300 cursor-pointer transition">
+        <Menu.Button className="flex items-center justify-center w-8 h-8 rounded-[10px] bg-white hover:ring-blue-1000 ring-2 ring-transparent cursor-pointer transition">
           <Image src="/images/dots-icon.svg" alt="options" width={20} height={20} />
         </Menu.Button>
       </div>

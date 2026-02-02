@@ -1,24 +1,25 @@
-"use client";
 import Sidebar from "@/app/components/common/Sidebar";
 import { Header } from "@/app/components/common/Header";
-import { useAppSelector } from "@/store/hooks";
+import { Metadata } from "next";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
-  title?: string;
-  showWallet?: boolean;
-  className?: string;
+
+}
+
+
+export const metadata: Metadata = {
+  title: 'Finances - Partner Portal',
+  description: 'Manage rent collection, deposits, and financial reporting in one unified platform.',
 }
 
 
 const FinancesLayout = ({ children }: DashboardLayoutProps) => {
-       const isMenuOpen = useAppSelector(
-          (state) => state.navigation.isMenuOpen
-        );
+   
 
   return (
     <main className={`font-dm-sans xl:pl-64 md:pl-50 pt-16 bg-gray-1900`}>
-        <Sidebar isOpen={isMenuOpen} />  
+        <Sidebar />  
         <Header title={"Finances"} showWallet={false} />
 
         {children}

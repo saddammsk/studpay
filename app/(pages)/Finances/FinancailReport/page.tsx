@@ -21,7 +21,7 @@ export default function FinancailReportPage() {
 
      return (
           <div className="xl:py-6 xl:pl-8 4xl:pr-10 xl:px-4 p-4">
-               <div className="flex items-center lg:gap-0 gap-5 lg:flex-nowrap flex-wrap sm:gap-0 gap-4 justify-between ">
+               <div className="flex items-center lg:gap-0 lg:flex-nowrap flex-wrap sm:gap-0 gap-4 justify-between ">
                     <div>
                          <h4 className="text-2xl font-bold leding-8 text-black-1200 mb-1">Financial Reports</h4>
                          <p className="text-base font-inter font-normal leading-6 text-gray-2200">Comprehensive financial analytics and reporting</p>

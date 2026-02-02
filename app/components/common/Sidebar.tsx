@@ -4,6 +4,8 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setActiveMenu } from "@/store/slices/navigationSlice";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
+import { LogoutModel } from "./LogoutModel";
 
 interface MenuItemProps {
   id: string;
@@ -108,10 +110,14 @@ const menuItems: MenuItemProps[] = [
 const SidebarMenuItem = ({ item, onMenuClick }: { item: MenuItemProps; onMenuClick: (id: string) => void }) => {
   const pathname = usePathname();
 
+
+
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
+
+  
  
   return (
     <li className="mb-1">
@@ -134,6 +140,8 @@ const SidebarMenuItem = ({ item, onMenuClick }: { item: MenuItemProps; onMenuCli
 const Sidebar = () => {
   const dispatch = useAppDispatch();
   const activeMenu = useAppSelector((state) => state.navigation.activeMenu);
+  const [showModel, setShowModal] = React.useState(false);
+
 
     const isMenuOpen = useAppSelector(
           (state) => state.navigation.isMenuOpen
@@ -142,6 +150,10 @@ const Sidebar = () => {
   const handleMenuClick = (menuId: string) => {
     dispatch(setActiveMenu(menuId));
   };
+
+  const Logout = ()=>{
+    setShowModal(true);
+  }
 
   return (
     <div
@@ -171,7 +183,7 @@ const Sidebar = () => {
         <ul>
           <li className="mb-1">
             <Link
-              href="/Setting/Profile"
+              href="/Settings/Profile"
               onClick={() => handleMenuClick("settings")}
               className={`group flex items-center gap-3 py-3 px-4 rounded-lg font-dm-sans text-base font-normal leading-6 transition-all duration-300 ${
                 activeMenu === "settings"
@@ -189,9 +201,9 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <a
-              href="#"
-              className="group flex items-center gap-3 py-3 px-4 rounded-lg font-dm-sans text-base font-normal leading-6 text-gray-1000 hover:bg-blue-1000/10 hover:text-blue-1000 hover:font-medium transition-all duration-300"
+            <button
+            onClick={Logout}
+              className="group cursor-pointer w-full flex gap-3 py-3 px-4 rounded-lg font-dm-sans text-base font-normal leading-6 text-gray-1000 hover:bg-blue-1000/10 hover:text-blue-1000 hover:font-medium transition-all duration-300"
             >
               <span className="flex items-center justify-center w-5 h-5">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -200,11 +212,13 @@ const Sidebar = () => {
                   <path className="group-hover:stroke-blue-1100" d="M17.5 10H7.5" stroke="currentColor" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
-              <span className="flex-1 w-full">Log out</span>
-            </a>
+              <span className="-mt-0.5 group-hover:font-medium">Log out</span>
+            </button>
           </li>
         </ul>
       </div>
+
+      <LogoutModel show={showModel} onClose={() => setShowModal(false)} />
     </div>
   );
 };
